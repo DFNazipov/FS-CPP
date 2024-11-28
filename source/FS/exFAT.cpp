@@ -15,21 +15,21 @@ bool exFAT::ReadClusterSize()
     sectorSizeOffset.QuadPart = 0;
 
     if (!SetFilePointerEx(fileHandler, sectorSizeOffset, NULL, FILE_BEGIN)) {
-        throw std::invalid_argument("Set FilePointer error");
-        CloseHandle(fileHandler);
+		throw std::invalid_argument("Failed to set file pointer");
+		CloseHandle(fileHandler);
         return false;
     }
     if (!ReadFile(fileHandler, sector, bytesToRead, &bytesRead, NULL))
     {
-        throw std::invalid_argument("ReadFile error");
+        throw std::invalid_argument("Failed to read from file");
         CloseHandle(fileHandler);
         return false;
     }
    BootRecord* pBootRecord = reinterpret_cast<BootRecord*>(sector);
-   unsigned int sectorSize = pow (2, sector[108]); //Размер сектора
-   unsigned int classCoeff = pow (2, sector[109]); //Кластерный множитель
+   unsigned int sectorSize = pow (2, sector[108]);
+   unsigned int classCoeff = pow (2, sector[109]);
    clusterSize = sectorSize * classCoeff;
-   unsigned int countSectors = static_cast<unsigned int>(pBootRecord->countSectors); // Количество секторов в ФС
+   unsigned int countSectors = static_cast<unsigned int>(pBootRecord->countSectors);
    clusterCount = countSectors / classCoeff;
    return true;
 }

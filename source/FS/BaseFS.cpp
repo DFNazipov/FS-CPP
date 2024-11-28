@@ -15,11 +15,11 @@ bool BaseFS::Init(LPCWSTR fileName) {
 
     if (fileHandler == INVALID_HANDLE_VALUE)
     {
-        throw std::invalid_argument("Error INVALID_HANDLE_VALUE!");
+		throw std::invalid_argument("Error: Unable to open file!");
         return false;
     }
     if (!ReadClusterSize()) {
-        throw std::invalid_argument("Error INVALID_HANDLE_VALUE!");
+		throw std::invalid_argument("Error: Failed to read size of cluster!");
         return false;
     }
     return true;
@@ -33,14 +33,14 @@ bool BaseFS::ReadCluster(Cluster* item, unsigned int clusterNum)
     BYTE* arr = new BYTE[clusterSize];
 
     if (!SetFilePointerEx(fileHandler, sectorSizeOffset, NULL, FILE_BEGIN)) {
-        throw std::invalid_argument("Set FilePointer error");
+		throw std::invalid_argument("Error: Failed to set file pointer to specified cluster!");
         CloseHandle(fileHandler);
         return false;
     }
     if (!ReadFile(fileHandler, arr, clusterSize, &bytesRead, NULL))
     {
-        throw std::invalid_argument("ReadFile error");
-        CloseHandle(fileHandler);
+		throw std::invalid_argument("Error: ReadFile operation failed!");
+		CloseHandle(fileHandler);
         return false;
     }
     item->SetClusterNum(clusterNum);

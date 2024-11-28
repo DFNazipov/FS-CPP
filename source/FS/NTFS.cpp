@@ -15,13 +15,13 @@ bool NTFS::ReadClusterSize()
     sectorSizeOffset.QuadPart = 0;
 
     if (!SetFilePointerEx(fileHandler, sectorSizeOffset, NULL, FILE_BEGIN)) {
-        throw std::invalid_argument("Set FilePointer error");
+		throw std::invalid_argument("Failed to set file pointer");
         CloseHandle(fileHandler);
         return false;
     }
     if (!ReadFile(fileHandler, sector, bytesToRead, &bytesRead, NULL))
     {
-        throw std::invalid_argument("ReadFile error");
+		throw std::invalid_argument("Failed to read from file");
         CloseHandle(fileHandler);
         return false;
     }
