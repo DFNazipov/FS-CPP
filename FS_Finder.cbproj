@@ -199,20 +199,31 @@
             <BuildOrder>13</BuildOrder>
         </None>
         <CppCompile Include="source\Iterator\Cluster.cpp">
-            <BuildOrder>5</BuildOrder>
+            <BuildOrder>18</BuildOrder>
         </CppCompile>
         <None Include="source\Iterator\Cluster.h">
-            <BuildOrder>18</BuildOrder>
-        </None>
-        <None Include="source\Iterator\Iterator.h">
             <BuildOrder>19</BuildOrder>
         </None>
+        <None Include="source\Iterator\Iterator.h">
+            <BuildOrder>20</BuildOrder>
+        </None>
         <CppCompile Include="source\Iterator\NTFSIterator.cpp">
-            <BuildOrder>6</BuildOrder>
+            <BuildOrder>21</BuildOrder>
         </CppCompile>
         <None Include="source\Iterator\NTFSIterator.h">
-            <BuildOrder>21</BuildOrder>
+            <BuildOrder>22</BuildOrder>
         </None>
+        <None Include="source\Iterator\__history\Cluster.cpp.~1~"/>
+        <None Include="source\Iterator\__history\Cluster.cpp.~2~"/>
+        <None Include="source\Iterator\__history\Cluster.cpp.~3~"/>
+        <None Include="source\Iterator\__history\Cluster.cpp.~4~"/>
+        <None Include="source\Iterator\__history\Cluster.h.~1~"/>
+        <None Include="source\Iterator\__history\Iterator.h.~1~"/>
+        <None Include="source\Iterator\__history\NTFSIterator.h.~1~"/>
+        <None Include="source\Iterator\__history\NTFSIterator.h.~2~"/>
+        <None Include="source\Iterator\__history\NTFSIterator.h.~3~"/>
+        <None Include="source\Iterator\__history\NTFSIterator.h.~4~"/>
+        <None Include="source\Iterator\__history\NTFSIterator.h.~5~"/>
         <CppCompile Include="ThreadClusters.cpp">
             <DependentOn>ThreadClusters.h</DependentOn>
             <BuildOrder>24</BuildOrder>
@@ -357,6 +368,72 @@
                 <DeployFile LocalName=".\Win64\Debug\FS_Finder.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win64">
                         <RemoteName>FS_Finder.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="source\Iterator\__history\Cluster.cpp.~1~" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="source\Iterator\__history\Cluster.cpp.~2~" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="source\Iterator\__history\Cluster.cpp.~3~" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="source\Iterator\__history\Cluster.cpp.~4~" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="source\Iterator\__history\Cluster.h.~1~" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="source\Iterator\__history\Iterator.h.~1~" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="source\Iterator\__history\NTFSIterator.h.~1~" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="source\Iterator\__history\NTFSIterator.h.~2~" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="source\Iterator\__history\NTFSIterator.h.~3~" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="source\Iterator\__history\NTFSIterator.h.~4~" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="source\Iterator\__history\NTFSIterator.h.~5~" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
